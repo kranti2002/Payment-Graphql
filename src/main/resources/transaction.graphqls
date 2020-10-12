@@ -1,0 +1,19 @@
+
+type Query {
+  processPayment(paymentTransactionReq: TransactionReq!): TransactionResp!
+}
+
+input TransactionReq{
+    cardNumber: String!
+    cardType: String!
+    nameAsOnCard: String!
+    cardExpMonth: String!
+    cardExpYear: String!
+    securityCode: String!
+}
+
+type TransactionResp { 
+message: String!
+success: Boolean!
+transactionId: String!
+}
